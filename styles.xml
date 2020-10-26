@@ -1,0 +1,13 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"> <!--Remove the Action Bar from the Top of the Screen-->
+        <!-- Customized theme-->
+        <item name="colorPrimary">#0F9D58</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="WindowTitleBackground">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+</resources>
