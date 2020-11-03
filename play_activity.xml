@@ -303,4 +303,32 @@
         app:layout_constraintTop_toBottomOf="@+id/logoSky"
         app:srcCompat="@drawable/rex" />
 
+    <TextView
+        android:id="@+id/rightOpenand"
+        android:layout_width="126dp"
+        android:layout_height="265dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="120dp"
+        android:fontFamily="@font/bangers"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#1E88E5"
+        android:textSize="150sp"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteBroad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/whiteBroad" />
+
+    <TextView
+        android:id="@+id/plusSign"
+        android:layout_width="65dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginBottom="120dp"
+        android:fontFamily="@font/bangers"
+        android:text="+"
+        android:textColor="#1E88E5"
+        android:textSize="150sp"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteBroad"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,15 +2,19 @@ package com.example.pawpatroladding;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView; // for linking the ImageView object
 import android.view.MotionEvent; //for touch and drag event
+import android.widget.TextView;
 
+import java.util.Random;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +38,16 @@ public class MainActivity extends AppCompatActivity {
         zuma.setOnTouchListener(handleTouch);
         everest = (ImageView) findViewById(R.id.logoEverest);
         everest.setOnTouchListener(handleTouch);
-        rex = (ImageView) findViewById(R.id.logoEverest);
+        rex = (ImageView) findViewById(R.id.logoRex);
         rex.setOnTouchListener(handleTouch);
+
+        int rightNumber = randomNumber();
+        TextView rightOperand;
+        rightOperand = (TextView) findViewById(R.id.rightOpenand);
+        rightOperand.setText(rightNumber+"");
+
+
+
 
 
 
@@ -68,6 +80,15 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     };
+
+    private int randomNumber()
+    {
+        Random r = new Random();
+        return r.nextInt(5);
+    }
+
+
+
 
 
 }
