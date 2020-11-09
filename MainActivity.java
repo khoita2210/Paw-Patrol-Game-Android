@@ -2,7 +2,6 @@ package com.example.pawpatroladding;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView; // for linking the ImageView object
@@ -14,7 +13,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    @SuppressLint("SetTextI18n")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,14 +40,15 @@ public class MainActivity extends AppCompatActivity {
         rex = (ImageView) findViewById(R.id.logoRex);
         rex.setOnTouchListener(handleTouch);
 
-        int rightNumber = randomNumber();
-        TextView rightOperand;
-        rightOperand = (TextView) findViewById(R.id.rightOpenand);
-        rightOperand.setText(rightNumber+"");
 
-
-
-
+        int[] array = number();
+        int rightNumber = array[0];
+        int leftNumber = array[1];
+        TextView rightOpenand, leftOpenand;
+        rightOpenand = (TextView) findViewById(R.id.rightOpenand);
+        rightOpenand.setText(rightNumber + "");
+        leftOpenand = (TextView) findViewById(R.id.leftOpenand);
+        leftOpenand.setText(leftNumber + "");
 
 
 
@@ -81,12 +81,22 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private int randomNumber()
-    {
+    private static int[] number(){/*new function to create 2 random number have sum less than 9 using do{} while loop and
+     pass the value to a int array*/
         Random r = new Random();
-        return r.nextInt(5);
-    }
+        int number1;
+        int number2;
+        do
+        {
+            number1= r.nextInt(10);
+            number2 = r.nextInt(10);
 
+
+        }
+        while(number1 + number2 >=10);
+        return new int[] {number1, number2};
+
+    }
 
 
 
