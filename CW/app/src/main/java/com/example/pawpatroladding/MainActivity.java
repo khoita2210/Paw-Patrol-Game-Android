@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         int[] array = number();
-        int rightNumber = array[0];
-        int leftNumber = array[1];
+        final int rightNumber = array[0];
+        final int leftNumber = array[1];
         final int sum2 = rightNumber +leftNumber;
         TextView rightOpenand, leftOpenand;
         rightOpenand = (TextView) findViewById(R.id.rightOpenAnd);
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 0;
                 if (numberClick == sum2){
-                    switchToResult();
+                    switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
                     ShowChase();
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 1;
                 if (numberClick == sum2){
-                    switchToResult();
+                    switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
                     ShowChase();
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 2;
                 if (numberClick == sum2){
-                    switchToResult();
+                    switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
                     ShowChase();
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 3;
                 if (numberClick == sum2){
-                    switchToResult();
+                    switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
                     ShowChase();
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 4;
                 if (numberClick == sum2){
-                    switchToResult();
+                    switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
                     ShowChase();
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 5;
                 if (numberClick == sum2){
-                    switchToResult();
+                    switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
                     ShowChase();
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 6;
                 if (numberClick == sum2){
-                    switchToResult();
+                    switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
                     ShowChase();
@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 7;
                 if (numberClick == sum2){
-                    switchToResult();
+                    switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
                     ShowChase();
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 8;
                 if (numberClick == sum2){
-                    switchToResult();
+                    switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
                     ShowChase();
@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 9;
                 if (numberClick == sum2){
-                    switchToResult();
+                    switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
                     ShowChase();
@@ -337,8 +337,18 @@ public class MainActivity extends AppCompatActivity {
 
     }*/
 
-    private void switchToResult() {
-           startActivity(new Intent(MainActivity.this, ResultActivity.class));
+    private void switchToResult(int leftOpenandtoPass, int rightOpenandtoPass,int valueClicked) {
+           Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+           Bundle extras = new Bundle();
+           extras.putInt("LEFT_VALUE",leftOpenandtoPass);
+           extras.putInt("RIGHT_VALUE",rightOpenandtoPass);
+           extras.putInt("CLICKED_VALUE",valueClicked);
+        //create and initialize an intent
+
+
+//attach the bundle to the Intent object
+           intent.putExtras(extras);
+           startActivity(intent);
     }
 
 

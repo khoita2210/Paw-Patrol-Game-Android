@@ -7,18 +7,132 @@
     android:background="@drawable/towerbackground1"
     tools:context=".ResultActivity">
 
-    <Button
-        android:id="@+id/backtoplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="443dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="355dp"
+    <ImageButton
+        android:id="@+id/replayButton"
+        android:layout_width="122dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="298dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="348dp"
+        android:background="@null"
         android:onClick="switchToPlay"
-        android:text="Again"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/replaybutton" />
+
+    <ImageView
+        android:id="@+id/hooray1"
+        android:layout_width="141dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/replayButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hooray" />
+
+    <ImageView
+        android:id="@+id/hooray2"
+        android:layout_width="141dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/replayButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hooray2" />
+
+    <ImageView
+        android:id="@+id/ryderJump"
+        android:layout_width="274dp"
+        android:layout_height="354dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/replayButton"
+        app:srcCompat="@drawable/picryder" />
+
+    <TextView
+        android:id="@+id/leftOpenandResults"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="67dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:textAlignment="center"
+        android:textColor="#3949AB"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/hooray1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rightOpenandResults"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="67dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:textAlignment="center"
+        android:textColor="#3949AB"
+        android:textSize="80sp"
+        app:layout_constraintStart_toStartOf="@+id/plusSign"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clickedResult"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="27dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:textAlignment="center"
+        android:textColor="#3949AB"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/equalSign"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/plusSign"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:text="+"
+        android:textAlignment="center"
+        android:textColor="#3949AB"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/hooray1"
+        app:layout_constraintStart_toStartOf="@+id/leftOpenandResults"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/equalSign"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="67dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:text="="
+        android:textAlignment="center"
+        android:textColor="#3949AB"
+        android:textSize="80sp"
+        app:layout_constraintStart_toStartOf="@+id/rightOpenandResults"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

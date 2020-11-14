@@ -13,12 +13,8 @@
         android:layout_height="70dp"
         android:layout_marginStart="18dp"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="716dp"
         android:alpha="1"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNumber1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/n0" />
@@ -29,39 +25,36 @@
         android:layout_height="70dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="60dp"
-        android:layout_marginBottom="716dp"
+        android:layout_marginEnd="6dp"
         android:alpha="1"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNumber2"
         app:layout_constraintStart_toEndOf="@+id/buttonNumber0"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/n1" />
     <!--Adding button number 1 -->
+    <!--Adding button number 2-->
     <ImageButton
         android:id="@+id/buttonNumber2"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="6dp"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="171dp"
-        android:layout_marginBottom="716dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonNumber1"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/n2" />
-    <!--Adding button number 2-->
+
     <ImageButton
         android:id="@+id/buttonNumber3"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="6dp"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="60dp"
-        android:layout_marginBottom="716dp"
+        android:layout_marginEnd="6dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNumber4"
         app:layout_constraintStart_toEndOf="@+id/buttonNumber2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/n3" />
@@ -70,14 +63,10 @@
         android:id="@+id/buttonNumber4"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="6dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="18dp"
-        android:layout_marginBottom="716dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonNumber3"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/n4" />
 
@@ -87,9 +76,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="18dp"
         android:layout_marginTop="6dp"
-        android:layout_marginBottom="640dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonNumber0"
         app:srcCompat="@drawable/number5" />
@@ -100,9 +87,9 @@
         android:layout_height="70dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="6dp"
-        android:layout_marginBottom="640dp"
+        android:layout_marginEnd="7dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNumber7"
         app:layout_constraintStart_toEndOf="@+id/buttonNumber5"
         app:layout_constraintTop_toBottomOf="@+id/buttonNumber1"
         app:srcCompat="@drawable/n6" />
@@ -111,14 +98,11 @@
         android:id="@+id/buttonNumber7"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="6dp"
         android:layout_marginTop="6dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="640dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNumber8"
-        app:layout_constraintStart_toEndOf="@+id/buttonNumber6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonNumber2"
         app:srcCompat="@drawable/n7" />
 
@@ -126,11 +110,11 @@
         android:id="@+id/buttonNumber8"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="6dp"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="6dp"
-        android:layout_marginBottom="640dp"
+        android:layout_marginEnd="6dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNumber9"
         app:layout_constraintStart_toEndOf="@+id/buttonNumber7"
         app:layout_constraintTop_toBottomOf="@+id/buttonNumber3"
         app:srcCompat="@drawable/n8" />
@@ -139,14 +123,10 @@
         android:id="@+id/buttonNumber9"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="6dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="18dp"
-        android:layout_marginBottom="640dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonNumber8"
         app:layout_constraintTop_toBottomOf="@+id/buttonNumber4"
         app:srcCompat="@drawable/n9" />
 
@@ -154,16 +134,11 @@
         android:id="@+id/whiteBroad"
         android:layout_width="411dp"
         android:layout_height="315dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="123dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/logoPaw"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonNumber7"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/broadd" />
 
     <ImageView
@@ -317,7 +292,7 @@
         android:textColor="#1E88E5"
         android:textSize="100sp"
         app:layout_constraintBottom_toBottomOf="@+id/whiteBroad"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/whiteBroad"
         app:layout_constraintTop_toTopOf="@+id/whiteBroad"
         app:layout_constraintVertical_bias="0.86" />
 
@@ -333,7 +308,7 @@
         android:textColor="#1E88E5"
         android:textSize="100sp"
         app:layout_constraintBottom_toBottomOf="@+id/whiteBroad"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/whiteBroad"
         app:layout_constraintTop_toTopOf="@+id/whiteBroad"
         app:layout_constraintVertical_bias="0.863" />
 
@@ -351,7 +326,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/whiteBroad"
         app:layout_constraintEnd_toEndOf="@+id/rightOpenAnd"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/whiteBroad"
         app:layout_constraintTop_toTopOf="@+id/whiteBroad"
         app:layout_constraintVertical_bias="0.013" />
 
@@ -372,13 +347,13 @@
 
     <ImageView
         android:id="@+id/wrongAnswer"
-        android:layout_width="136dp"
-        android:layout_height="113dp"
+        android:layout_width="119dp"
+        android:layout_height="112dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.928"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteBroad"
+        app:layout_constraintEnd_toEndOf="@+id/whiteBroad"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toStartOf="@+id/whiteBroad"
         app:layout_constraintTop_toTopOf="@+id/whiteBroad"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/wronganswer" />
