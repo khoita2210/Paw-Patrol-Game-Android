@@ -3,6 +3,7 @@ package com.example.pawpatroladding;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -29,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.play_activity);
-        ImageView paw, ryder, chase, sky, marshall, rocky, rubble, zuma, everest, rex;
+        final MediaPlayer song = MediaPlayer.create(MainActivity.this, R.raw.untitled);
+        song.start();
+        ImageView paw, ryder, chase, sky, marshall, rocky, rubble, zuma, everest;
         paw = (ImageView) findViewById(R.id.logoPaw);
         paw.setOnTouchListener(handleTouch);
         ryder = (ImageView) findViewById(R.id.logoRyder);
@@ -48,8 +51,6 @@ public class MainActivity extends AppCompatActivity {
         zuma.setOnTouchListener(handleTouch);
         everest = (ImageView) findViewById(R.id.logoEverest);
         everest.setOnTouchListener(handleTouch);
-        rex = (ImageView) findViewById(R.id.logoRex);
-        rex.setOnTouchListener(handleTouch);
 
 
 
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 0;
                 if (numberClick == sum2){
+                    song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 1;
                 if (numberClick == sum2){
+                    song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
@@ -107,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 2;
                 if (numberClick == sum2){
+                    song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
@@ -123,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 3;
                 if (numberClick == sum2){
+                    song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
@@ -139,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 4;
                 if (numberClick == sum2){
+                    song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
@@ -155,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 5;
                 if (numberClick == sum2){
+                    song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
@@ -172,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 6;
                 if (numberClick == sum2){
+                    song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
@@ -188,6 +196,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 7;
                 if (numberClick == sum2){
+                    song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
@@ -204,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 8;
                 if (numberClick == sum2){
+                    song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
@@ -220,6 +230,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int numberClick = 9;
                 if (numberClick == sum2){
+                    song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
@@ -386,7 +397,10 @@ public class MainActivity extends AppCompatActivity {
         oops.startAnimation(alpha);
     }
 
-
+    private void BackgroundSound(){
+        MediaPlayer song = MediaPlayer.create(MainActivity.this, R.raw.untitled);
+        song.start();
+    }
 
 
 

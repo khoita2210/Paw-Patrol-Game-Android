@@ -87,6 +87,7 @@
         android:textAlignment="center"
         android:textColor="#3949AB"
         android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/hooray1"
         app:layout_constraintStart_toStartOf="@+id/plusSign"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,6 +102,7 @@
         android:textAlignment="center"
         android:textColor="#3949AB"
         android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/hooray2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/equalSign"
         app:layout_constraintTop_toTopOf="parent" />
@@ -127,11 +129,13 @@
         android:layout_height="84dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="67dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="="
         android:textAlignment="center"
         android:textColor="#3949AB"
         android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/hooray2"
         app:layout_constraintStart_toStartOf="@+id/rightOpenandResults"
         app:layout_constraintTop_toTopOf="parent" />
 
