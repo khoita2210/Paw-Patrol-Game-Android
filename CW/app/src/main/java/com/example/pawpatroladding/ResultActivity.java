@@ -3,6 +3,7 @@ package com.example.pawpatroladding;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -27,6 +28,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_layer);
         AlphaAnimation();
+        final MediaPlayer welldonesong = MediaPlayer.create(ResultActivity.this, R.raw.complete);
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
@@ -42,6 +44,7 @@ public class ResultActivity extends AppCompatActivity {
         RightView.setText(rightValue+"");
         TextView AnswerView = (TextView) findViewById(R.id.clickedResult);
         AnswerView.setText(clickedValue+"");
+        welldonesong.start();
 
 
 

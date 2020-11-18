@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
+                    WrongAnswer();
                     ShowChase();
                     ShowOops();
                     Alpha();
@@ -97,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
+                    WrongAnswer();
                     ShowChase();
                     ShowOops();
                     Alpha();
@@ -114,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
+                    WrongAnswer();
                     ShowChase();
                     ShowOops();
                     Alpha();
@@ -131,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
+                    WrongAnswer();
                     ShowChase();
                     ShowOops();
                     Alpha();
@@ -148,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
+                    WrongAnswer();
                     ShowChase();
                     ShowOops();
                     Alpha();
@@ -165,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
+                    WrongAnswer();
                     ShowChase();
                     ShowOops();
                     Alpha();
@@ -183,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
+                    WrongAnswer();
                     ShowChase();
                     ShowOops();
                     Alpha();
@@ -200,6 +207,7 @@ public class MainActivity extends AppCompatActivity {
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
+                    WrongAnswer();
                     ShowChase();
                     ShowOops();
                     Alpha();
@@ -217,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
+                    WrongAnswer();
                     ShowChase();
                     ShowOops();
                     Alpha();
@@ -234,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{
+                    WrongAnswer();
                     ShowChase();
                     ShowOops();
                     Alpha();
@@ -402,6 +412,11 @@ public class MainActivity extends AppCompatActivity {
         song.start();
     }
 
+
+    private void WrongAnswer(){
+        MediaPlayer song = MediaPlayer.create(MainActivity.this, R.raw.ohno);
+        song.start();
+    }
 
 
 
