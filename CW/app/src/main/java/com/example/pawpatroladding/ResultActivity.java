@@ -54,6 +54,7 @@ public class ResultActivity extends AppCompatActivity {
     public void switchToPlay(View v) {
 
         startActivity(new Intent(ResultActivity.this, MainActivity.class));;
+        v.startAnimation(buttonClick);
     }
 
 
@@ -78,6 +79,8 @@ public class ResultActivity extends AppCompatActivity {
         congrat3.startAnimation(alpha);
 
     }
+
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.1F);
 
 
 

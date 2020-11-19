@@ -30,8 +30,6 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".ResultActivity">
-            android:screenOrientation="portrait">
-            <!-- Lock to vertical only -->
         </activity>
     </application>
 

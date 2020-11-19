@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int numberClick = 0;
+                v.startAnimation(buttonClick);
                 if (numberClick == sum2){
                     song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int numberClick = 1;
+                v.startAnimation(buttonClick);
                 if (numberClick == sum2){
                     song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
@@ -111,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int numberClick = 2;
+                v.startAnimation(buttonClick);
                 if (numberClick == sum2){
                     song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
@@ -129,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int numberClick = 3;
+                v.startAnimation(buttonClick);
                 if (numberClick == sum2){
                     song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
@@ -147,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int numberClick = 4;
+                v.startAnimation(buttonClick);
                 if (numberClick == sum2){
                     song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
@@ -165,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int numberClick = 5;
+                v.startAnimation(buttonClick);
                 if (numberClick == sum2){
                     song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
@@ -184,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int numberClick = 6;
+                v.startAnimation(buttonClick);
                 if (numberClick == sum2){
                     song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
@@ -202,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int numberClick = 7;
+                v.startAnimation(buttonClick);
                 if (numberClick == sum2){
                     song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
@@ -220,6 +228,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int numberClick = 8;
+                v.startAnimation(buttonClick);
                 if (numberClick == sum2){
                     song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
@@ -238,6 +247,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int numberClick = 9;
+                v.startAnimation(buttonClick);
                 if (numberClick == sum2){
                     song.pause();
                     switchToResult(leftNumber,rightNumber,numberClick);
@@ -417,6 +427,10 @@ public class MainActivity extends AppCompatActivity {
         MediaPlayer song = MediaPlayer.create(MainActivity.this, R.raw.ohno);
         song.start();
     }
+
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.1F);
+
+
 
 
 
