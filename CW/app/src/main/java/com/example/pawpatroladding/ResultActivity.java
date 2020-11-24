@@ -19,21 +19,22 @@ import android.widget.TextView;
 import android.view.animation.ScaleAnimation;
 import android.util.Log;  //Used for Log
 
-import org.w3c.dom.Text;
-
 public class ResultActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_layer);
-        AlphaAnimation();
+
+        AlphaAnimation();/*pop up the image*/
+
         final MediaPlayer welldonesong = MediaPlayer.create(ResultActivity.this, R.raw.complete);
 
+        /*Extracting the stored data from the bundle from MainActivity*/
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
-//Extracting the stored data from the bundle
+
 
         int leftValue = extras.getInt("LEFT_VALUE");
         int rightValue = extras.getInt("RIGHT_VALUE");
@@ -51,7 +52,7 @@ public class ResultActivity extends AppCompatActivity {
 
     }
 
-    public void switchToPlay(View v) {
+    public void switchToPlay(View v) {/*Repeat button*/
 
         startActivity(new Intent(ResultActivity.this, MainActivity.class));;
         v.startAnimation(buttonClick);
@@ -61,26 +62,25 @@ public class ResultActivity extends AppCompatActivity {
     ImageView congrat1;
     ImageView congrat2;
     ImageView congrat3;
-    ImageView congrat4;
 
 
     AlphaAnimation alpha;
 
 
 
-    private void AlphaAnimation(){
+    private void AlphaAnimation(){ /*Start the alpha animation*/
         congrat1 = (ImageView) findViewById(R.id.hooray1);
         congrat2 = (ImageView) findViewById(R.id.hooray2);
         congrat3 = (ImageView) findViewById(R.id.ryderJump);
         alpha = new AlphaAnimation(0, 1);
-        alpha.setDuration(2000);
+        alpha.setDuration(1700);
         congrat1.startAnimation(alpha);
         congrat2.startAnimation(alpha);
         congrat3.startAnimation(alpha);
 
     }
 
-    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.1F);
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.1F); /*Button clicked effect */
 
 
 

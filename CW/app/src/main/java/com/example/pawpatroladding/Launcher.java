@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 
-public class Launcher extends AppCompatActivity {
+public class Launcher extends AppCompatActivity { /*Launcher screen*/
 
 
     @Override
@@ -20,12 +20,12 @@ public class Launcher extends AppCompatActivity {
 
     }
 
-    public void switchToPlay(View v) {
+    public void switchToPlay(View v) { /*If clicked move to MainActivity*/
 
         startActivity(new Intent(Launcher.this, MainActivity.class));
         v.startAnimation(buttonClick);
     }
 
-    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
+    private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.5F); /*Button Clicked effect*/
 
 }
