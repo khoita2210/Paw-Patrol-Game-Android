@@ -141,4 +141,16 @@
         app:layout_constraintStart_toStartOf="@+id/rightOpenandResults"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/pointfinger2"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintBottom_toBottomOf="@+id/replayButton"
+        app:layout_constraintEnd_toEndOf="@+id/replayButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/replayButton"
+        app:srcCompat="@drawable/pointingfinger" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

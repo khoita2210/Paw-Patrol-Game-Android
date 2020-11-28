@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.view.animation.AlphaAnimation;
 
@@ -46,6 +47,9 @@ public class ResultActivity extends AppCompatActivity {
         TextView AnswerView = (TextView) findViewById(R.id.clickedResult);
         AnswerView.setText(clickedValue+"");
         welldonesong.start();
+        HelpAnimation();
+
+
 
 
 
@@ -81,6 +85,19 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.1F); /*Button clicked effect */
+
+
+    ImageView finger;
+    AlphaAnimation alpha1;
+    private void HelpAnimation() {
+        finger= (ImageView) findViewById(R.id.pointfinger2);
+        alpha1 = new AlphaAnimation(0, 1);
+        alpha1.setDuration(2000);
+        alpha1.setRepeatCount(Animation.INFINITE);
+        finger.startAnimation(alpha1);
+    }
+
+
 
 
 
