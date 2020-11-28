@@ -6,4 +6,5 @@
 + play_activity.xml
 + strings.xml
 + styles.xml 
++ .idea
 # Those are the file that I uploaded before I fixed the "more than 100 files" problem, I will keep those files to prove that I have start on 26/10/2020 and made some changes to the project
