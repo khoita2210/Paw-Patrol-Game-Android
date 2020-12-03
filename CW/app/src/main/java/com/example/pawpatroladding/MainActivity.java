@@ -2,17 +2,17 @@ package com.example.pawpatroladding;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent; //for starting another activity
-
+import android.content.pm.ActivityInfo; //for setting screen portrait
 import android.media.MediaPlayer;//for linking WAV.file
-import android.os.Bundle;
-import android.view.View;
+import android.os.Bundle;//linking to pass variable between activities
+import android.os.Vibrator; //using the phone Vibrator
+import android.view.View;  // link View
 import android.view.animation.AlphaAnimation; //for Alpha animation
 import android.widget.ImageButton; //for linking ImageButton object
 import android.widget.ImageView; // for linking the ImageView object
 import android.view.MotionEvent; //for touch and drag event
 import android.widget.TextView; // for linking the TextView object
-
-import java.util.Random;
+import java.util.Random; //to create random number
 
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton button0,button1,button2,button3, button4, button5, button6, button7, button8,button9;
     ImageView chaseWrong, oops;
     AlphaAnimation alpha;
+    Vibrator vibration;
 
 
 
@@ -29,33 +30,44 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); /*Make the app portrait*/
+        final MediaPlayer song = MediaPlayer.create(MainActivity.this, R.raw.play); /*Back ground song */
         setContentView(R.layout.play_activity);
 
-        final MediaPlayer song = MediaPlayer.create(MainActivity.this, R.raw.untitled); /*Back ground song */
         song.start(); /*background song will start when open the activity */
 
         ImageView paw, ryder, chase, sky, marshall, rocky, rubble,zuma, everest;
 
-        /*finds the view from the layout resource*/
+
+        /*finds the view from the layout resource and set drag movement and animations*/
         paw = (ImageView) findViewById(R.id.logoPaw);
         paw.setOnTouchListener(handleTouch);
+        paw.startAnimation(Hint());
         ryder = (ImageView) findViewById(R.id.logoRyder);
         ryder.setOnTouchListener(handleTouch);
+        ryder.startAnimation(Hint());
         chase = (ImageView) findViewById(R.id.logoChase);
         chase.setOnTouchListener(handleTouch);
+        chase.startAnimation(Hint());
         marshall = (ImageView) findViewById(R.id.logoMashall);
         marshall.setOnTouchListener(handleTouch);
+        marshall.startAnimation(Hint());
         sky = (ImageView) findViewById(R.id.logoSky);
         sky.setOnTouchListener(handleTouch);
+        sky.startAnimation(Hint());
         rocky = (ImageView) findViewById(R.id.logoRocky);
         rocky.setOnTouchListener(handleTouch);
+        rocky.startAnimation(Hint());
         rubble = (ImageView) findViewById(R.id.logoRubble);
         rubble.setOnTouchListener(handleTouch);
+        rubble.startAnimation(Hint());
         zuma = (ImageView) findViewById(R.id.logoZuma);
         zuma.setOnTouchListener(handleTouch);
+        zuma.startAnimation(Hint());
         everest = (ImageView) findViewById(R.id.logoEverest);
         everest.setOnTouchListener(handleTouch);
+        everest.startAnimation(Hint());
+
 
 
         hidePopUpWarning(); /*Hide the image*/
@@ -86,7 +98,8 @@ public class MainActivity extends AppCompatActivity {
                 int numberClick = 0;
                 v.startAnimation(buttonClick);/*Button Clicked effect*/
                 if (numberClick == sum2){/*if equal then switch to result*/
-                    song.pause();
+                    song.stop();
+                    song.release();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{ /*if not equal pop up the warning*/
@@ -105,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
                 int numberClick = 1;
                 v.startAnimation(buttonClick);/*Button Clicked effect*/
                 if (numberClick == sum2){/*if equal then switch to result*/
-                    song.pause();
+                    song.stop();
+                    song.release();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{ /*if not equal pop up the warning*/
@@ -124,7 +138,8 @@ public class MainActivity extends AppCompatActivity {
                 int numberClick = 2;
                 v.startAnimation(buttonClick);/*Button Clicked effect*/
                 if (numberClick == sum2){/*if equal then switch to result*/
-                    song.pause();
+                    song.stop();
+                    song.release();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{ /*if not equal pop up the warning*/
@@ -143,7 +158,8 @@ public class MainActivity extends AppCompatActivity {
                 int numberClick = 3;
                 v.startAnimation(buttonClick);/*Button Clicked effect*/
                 if (numberClick == sum2){/*if equal then switch to result*/
-                    song.pause();
+                    song.stop();
+                    song.release();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{ /*if not equal pop up the warning*/
@@ -162,7 +178,8 @@ public class MainActivity extends AppCompatActivity {
                 int numberClick = 4;
                 v.startAnimation(buttonClick); /*Button Clicked effect*/
                 if (numberClick == sum2){/*if equal then switch to result*/
-                    song.pause();
+                    song.stop();
+                    song.release();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{ /*if not equal pop up the warning*/
@@ -181,7 +198,8 @@ public class MainActivity extends AppCompatActivity {
                 int numberClick = 5;
                 v.startAnimation(buttonClick);/*Button Clicked effect*/
                 if (numberClick == sum2){/*if equal then switch to result*/
-                    song.pause();
+                    song.stop();
+                    song.release();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{ /*if not equal pop up the warning*/
@@ -201,7 +219,8 @@ public class MainActivity extends AppCompatActivity {
                 int numberClick = 6;
                 v.startAnimation(buttonClick);/*Button Clicked effect*/
                 if (numberClick == sum2){/*if equal then switch to result*/
-                    song.pause();
+                    song.stop();
+                    song.release();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{ /*if not equal pop up the warning*/
@@ -220,7 +239,8 @@ public class MainActivity extends AppCompatActivity {
                 int numberClick = 7;
                 v.startAnimation(buttonClick);/*Button Clicked effect*/
                 if (numberClick == sum2){/*if equal then switch to result*/
-                    song.pause();
+                    song.stop();
+                    song.release();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{ /*if not equal pop up the warning*/
@@ -240,7 +260,8 @@ public class MainActivity extends AppCompatActivity {
                 int numberClick = 8;
                 v.startAnimation(buttonClick); /*Button Clicked effect*/
                 if (numberClick == sum2){ /*if equal then switch to result*/
-                    song.pause();
+                    song.stop();
+                    song.release();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{ /*if not equal pop up the warning*/
@@ -260,7 +281,8 @@ public class MainActivity extends AppCompatActivity {
                 int numberClick = 9;
                 v.startAnimation(buttonClick); /*Button Clicked effect*/
                 if (numberClick == sum2){   /*if equal then switch to result*/
-                    song.pause();
+                    song.stop();
+                    song.release();
                     switchToResult(leftNumber,rightNumber,numberClick);
                 }
                 else{ /*if not equal pop up the warning*/
@@ -271,7 +293,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
 
 
@@ -288,9 +309,11 @@ public class MainActivity extends AppCompatActivity {
                     dY = view.getY() - event.getRawY();
                     break;
                 case MotionEvent.ACTION_MOVE:
+                    float x = event.getRawX() + dX;
+                    float y = event.getRawY() + dY;
                     view.animate()
-                            .x(event.getRawX() + dX)
-                            .y(event.getRawY() + dY)
+                            .x(x)
+                            .y(y)
                             .setDuration(0)
                             .start();
                     break;
@@ -301,12 +324,15 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private void popUpWarning(){ /*Pop up the images and start a sound fx
+
+    private void popUpWarning(){ /*Pop up the images and start a sound fx, and vibrate
      to warning that the answer is wrong */
         WrongAnswer();
         ShowChase();
         ShowOops();
         Alpha();
+        vibration = (Vibrator)getSystemService(VIBRATOR_SERVICE);
+        vibration.vibrate(300);
     }
     private void hidePopUpWarning(){/*Pop up the images to warning that the answer is wrong */
         HideChase();
@@ -353,6 +379,7 @@ public class MainActivity extends AppCompatActivity {
         wrongAnswerView.setVisibility(View.INVISIBLE);
     }
 
+
     private void ShowChase() {/*Show the image tell that user choose wrong*/
         View wrongAnswerView;
         wrongAnswerView = (View) findViewById(R.id.wrongAnswer);
@@ -363,6 +390,7 @@ public class MainActivity extends AppCompatActivity {
         View wrongAnswerView;
         wrongAnswerView = (View) findViewById(R.id.wrongAnswer2);
         wrongAnswerView.setVisibility(View.INVISIBLE);
+
     }
 
     private void ShowOops() {/*Show the image tell that user choose wrong*/
@@ -388,6 +416,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.1F); /*Set the effect when click button*/
+
+    private AlphaAnimation Hint(){
+        AlphaAnimation flash = new AlphaAnimation(0, 1); /*Set the effect*/
+        flash.setDuration(1000);
+        return flash;
+    }
+
+
 
 
 

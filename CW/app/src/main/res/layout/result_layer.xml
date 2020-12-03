@@ -16,7 +16,6 @@
         android:layout_marginEnd="106dp"
         android:layout_marginBottom="348dp"
         android:background="@null"
-        android:onClick="switchToPlay"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,14 +52,14 @@
         android:layout_width="274dp"
         android:layout_height="354dp"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="4dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/rubble"
         app:layout_constraintTop_toBottomOf="@+id/replayButton"
+        app:layout_constraintVertical_bias="0.448"
         app:srcCompat="@drawable/picryder" />
 
     <TextView
@@ -143,14 +142,28 @@
 
     <ImageView
         android:id="@+id/pointfinger2"
-        android:layout_width="108dp"
-        android:layout_height="108dp"
+        android:layout_width="127dp"
+        android:layout_height="78dp"
         android:layout_marginStart="36dp"
         android:layout_marginEnd="120dp"
         app:layout_constraintBottom_toBottomOf="@+id/replayButton"
         app:layout_constraintEnd_toEndOf="@+id/replayButton"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/replayButton"
+        app:layout_constraintVertical_bias="0.613"
         app:srcCompat="@drawable/pointingfinger" />
+
+    <ImageView
+        android:id="@+id/rubble"
+        android:layout_width="245dp"
+        android:layout_height="143dp"
+        android:layout_marginEnd="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/replayButton"
+        app:layout_constraintVertical_bias="0.692"
+        app:srcCompat="@drawable/rubblefun" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

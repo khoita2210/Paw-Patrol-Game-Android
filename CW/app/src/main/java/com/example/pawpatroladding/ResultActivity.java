@@ -2,34 +2,32 @@ package com.example.pawpatroladding;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.media.MediaPlayer;
-import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
-import android.view.animation.Animation;
-import android.widget.Button;
-import android.view.animation.AlphaAnimation;
-
-import android.os.Bundle;
+import android.content.Intent; //for starting another activity
+import android.content.pm.ActivityInfo;//for setting screen portrait
+import android.media.MediaPlayer;//for linking WAV.file
+import android.os.Bundle;//linking to pass variable between activities
+import android.view.animation.Animation;//for animation
+import android.view.animation.AlphaAnimation;//for AlphaAnimation
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.ImageButton;//for linking ImageButton object
 import android.widget.ImageView; // for linking the ImageView object
-import android.view.MotionEvent; //for touch and drag event
-import android.widget.TextView;
-import android.view.animation.ScaleAnimation;
-import android.util.Log;  //Used for Log
+import android.widget.TextView;//for linking TextView object
+import android.view.animation.TranslateAnimation; //for linking TranslateAnimation
 
 public class ResultActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);/*Make the app portrait*/
         setContentView(R.layout.result_layer);
 
-        AlphaAnimation();/*pop up the image*/
+        /*pop up the image*/
+        AlphaAnimation();
+        TranslateAnimation();
 
         final MediaPlayer welldonesong = MediaPlayer.create(ResultActivity.this, R.raw.complete);
+
 
         /*Extracting the stored data from the bundle from MainActivity*/
         Intent intent = getIntent();
@@ -49,6 +47,16 @@ public class ResultActivity extends AppCompatActivity {
         welldonesong.start();
         HelpAnimation();
 
+        rePlay = (ImageButton) findViewById(R.id.replayButton); /*finds the view from the layout resource*/
+        rePlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {/*When clicked set the value of numberClick to 0 and compare
+                it with the sum of Left and Right open and*/
+                switchToPlay();
+                rePlay.startAnimation(buttonClick);
+                welldonesong.stop();
+            }
+        });
 
 
 
@@ -56,22 +64,33 @@ public class ResultActivity extends AppCompatActivity {
 
     }
 
-    public void switchToPlay(View v) {/*Repeat button*/
+    ImageButton rePlay;
+    public void switchToPlay() {/*Repeat button*/
 
         startActivity(new Intent(ResultActivity.this, MainActivity.class));;
-        v.startAnimation(buttonClick);
+
     }
 
 
     ImageView congrat1;
     ImageView congrat2;
     ImageView congrat3;
+    ImageView congrat4;
 
 
+
+
+
+    TranslateAnimation trans;
+
+    private void TranslateAnimation(){ /*Translate Animation*/
+        congrat4 = (ImageView) findViewById(R.id.rubble);
+        trans = new TranslateAnimation(0, 200, 0,100);
+        trans.setDuration(10000);
+        congrat4.startAnimation(trans);
+
+    }
     AlphaAnimation alpha;
-
-
-
     private void AlphaAnimation(){ /*Start the alpha animation*/
         congrat1 = (ImageView) findViewById(R.id.hooray1);
         congrat2 = (ImageView) findViewById(R.id.hooray2);
@@ -87,9 +106,10 @@ public class ResultActivity extends AppCompatActivity {
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.1F); /*Button clicked effect */
 
 
+
     ImageView finger;
     AlphaAnimation alpha1;
-    private void HelpAnimation() {
+    private void HelpAnimation() {   /*Create a new animation*/
         finger= (ImageView) findViewById(R.id.pointfinger2);
         alpha1 = new AlphaAnimation(0, 1);
         alpha1.setDuration(2000);

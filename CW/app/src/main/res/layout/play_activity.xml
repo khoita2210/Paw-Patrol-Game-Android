@@ -150,6 +150,19 @@
         app:srcCompat="@drawable/broadd" />
 
     <ImageView
+        android:id="@+id/Line"
+        android:layout_width="490dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="70dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/logoPaw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rightOpenAnd"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
         android:id="@+id/logoPaw"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -323,7 +336,7 @@
         android:textSize="80sp"
         app:layout_constraintBottom_toBottomOf="@+id/whiteBroad"
         app:layout_constraintEnd_toEndOf="@+id/whiteBroad"
-        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="@+id/rightOpenAnd"
         app:layout_constraintTop_toTopOf="@+id/whiteBroad"
         app:layout_constraintVertical_bias="0.392" />
