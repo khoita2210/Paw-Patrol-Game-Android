@@ -6,11 +6,11 @@ import android.content.Intent; //for starting another activity
 import android.content.pm.ActivityInfo;//for setting screen portrait
 import android.media.MediaPlayer;//for linking WAV.file
 import android.os.Bundle;
-import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.widget.ImageButton;
-import android.widget.ImageView;
+import android.view.View; // for linking the View
+import android.view.animation.AlphaAnimation;//for animation
+import android.view.animation.Animation;//for animation
+import android.widget.ImageButton;//for linking ImageButton object
+import android.widget.ImageView;// for linking the ImageView object
 
 public class Launcher extends AppCompatActivity { /*Launcher screen*/
 
@@ -26,8 +26,7 @@ public class Launcher extends AppCompatActivity { /*Launcher screen*/
         playButton = (ImageButton) findViewById(R.id.playButton); /*finds the view from the layout resource*/
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {/*When clicked set the value of numberClick to 0 and compare
-                it with the sum of Left and Right open and*/
+            public void onClick(View v) {/*When clicked stop the song and switch to the play screen*/
                 switchToPlay();
                 playButton.startAnimation(buttonClick);
                 Song.stop();

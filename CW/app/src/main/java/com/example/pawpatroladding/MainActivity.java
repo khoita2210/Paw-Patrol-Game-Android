@@ -16,7 +16,7 @@ import java.util.Random; //to create random number
 
 
 public class MainActivity extends AppCompatActivity {
-
+     /*add Global variable */
     ImageButton button0,button1,button2,button3, button4, button5, button6, button7, button8,button9;
     ImageView chaseWrong, oops;
     AlphaAnimation alpha;
