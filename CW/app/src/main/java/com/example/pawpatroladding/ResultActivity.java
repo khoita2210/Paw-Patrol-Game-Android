@@ -81,25 +81,26 @@ public class ResultActivity extends AppCompatActivity {
 
 
 
-    TranslateAnimation trans;
+    TranslateAnimation trans,trans2;
 
     private void TranslateAnimation(){ /*Translate Animation*/
         congrat4 = (ImageView) findViewById(R.id.rubble);
-        trans = new TranslateAnimation(0, 200, 0,100);
-        trans.setDuration(10000);
+        trans = new TranslateAnimation(0, 80, 0,0);
+        trans.setDuration(7000);
         congrat4.startAnimation(trans);
-
+        congrat3 = (ImageView) findViewById(R.id.ryderJump);
+        trans2 = new TranslateAnimation(150,50, 0,0);
+        trans2.setDuration(7000);
+        congrat3.startAnimation(trans2);
     }
     AlphaAnimation alpha;
     private void AlphaAnimation(){ /*Start the alpha animation*/
         congrat1 = (ImageView) findViewById(R.id.hooray1);
         congrat2 = (ImageView) findViewById(R.id.hooray2);
-        congrat3 = (ImageView) findViewById(R.id.ryderJump);
         alpha = new AlphaAnimation(0, 1);
         alpha.setDuration(1700);
         congrat1.startAnimation(alpha);
         congrat2.startAnimation(alpha);
-        congrat3.startAnimation(alpha);
 
     }
 

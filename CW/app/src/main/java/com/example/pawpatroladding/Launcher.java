@@ -20,7 +20,7 @@ public class Launcher extends AppCompatActivity { /*Launcher screen*/
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);/*Make the app portrait*/
         setContentView(R.layout.activity_launcher);
-        final MediaPlayer Song = MediaPlayer.create(Launcher.this, R.raw.pawpatrolpuppupboogie); /*Back ground song */
+        final MediaPlayer Song = MediaPlayer.create(Launcher.this, R.raw.themesong); /*Back ground song */
         Song.start(); /*start song when open the app*/
         Animation(); /*run the finger animation*/
         playButton = (ImageButton) findViewById(R.id.playButton); /*finds the view from the layout resource*/

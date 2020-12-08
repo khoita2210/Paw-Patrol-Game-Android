@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); /*Make the app portrait*/
-        final MediaPlayer song = MediaPlayer.create(MainActivity.this, R.raw.play); /*Back ground song */
+        final MediaPlayer song = MediaPlayer.create(MainActivity.this, R.raw.untitled); /*Back ground song */
         setContentView(R.layout.play_activity);
 
         song.start(); /*background song will start when open the activity */
